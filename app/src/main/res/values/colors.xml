@@ -8,5 +8,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="splashBackgroundColor">#F81E1E</color>
-    <color name="splash_button">#12C3DA</color>
+    <color name="splash_button">#E9E7EA</color>
+    <color name="red">#640A04</color>
 </resources>

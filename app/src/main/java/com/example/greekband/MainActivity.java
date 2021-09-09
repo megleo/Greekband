@@ -5,8 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -44,6 +47,33 @@ public class MainActivity extends AppCompatActivity {
             UserInfo userInfo = (UserInfo)intent.getSerializableExtra(SplaishActivity.USER_INFO);
             setTitle("名字：" + userInfo.getmUserName() + " 年龄：" + userInfo.getmAge());
         }
+
+        EditText editText = (EditText)findViewById(R.id.editTextTime);
+        editText.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                // 长按时间 空间都有的事件监听
+                return false;
+            }
+        });
+
+        // EditText特有的事件监听
+        editText.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
     }
 
     @Override
