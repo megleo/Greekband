@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">Greekband</string>
+    <string name="app_name">极客班</string>
+    <string name="splash_text">极客班启动页面</string>
+    <string name="click_to_enter">点击进入</string>
 </resources>
