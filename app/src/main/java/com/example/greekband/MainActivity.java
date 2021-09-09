@@ -23,9 +23,6 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.button_first:
                     setResult(RESULT_CODE);
                     finish();
-                case R.id.button_second:
-                    startActivity(new Intent(MainActivity.this,SplaishActivity.class));
-                    break;
             }
         }
     };
@@ -35,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         Log.i(TAG,"onCreate");
         setContentView(R.layout.activity_main);
         findViewById(R.id.button_first).setOnClickListener(mOnClickListener);
-        findViewById(R.id.button_second).setOnClickListener(mOnClickListener);
+        // findViewById(R.id.button_second).setOnClickListener(mOnClickListener);
 
 
         // 从SplashActivity 得到带有信息的intent
@@ -61,16 +58,32 @@ public class MainActivity extends AppCompatActivity {
         editText.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
+                Log.i(TAG,"beforeTextChanged:s: " + s.toString() + " ,start: " + start + " ,count:"
+                        + count + " ,after" + after);
             }
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
+                Log.i(TAG,"onTextChanged:s: " + s.toString() + " ,start: " +
+                        start + " ,count:"+ count + " ,before" + before);
 
             }
 
             @Override
             public void afterTextChanged(Editable s) {
+                Log.i(TAG,"afterTextChanged:s: " + s.toString());
+                if (s.toString().length() > 5){
+                    Toast.makeText(MainActivity.this,
+                            "啊，救命，超过五个字了",Toast.LENGTH_SHORT).show();
+                }
+
+            }
+        });
+
+        // seekbar
+        findViewById(R.id.seekBar).setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
 
             }
         });

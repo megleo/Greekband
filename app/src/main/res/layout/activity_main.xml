@@ -15,58 +15,28 @@
         android:singleLine="false"
         android:maxLines="2"
         android:textColor="@color/red"/>
-
+    <EditTexteditTextTime
+        android:id="@+id/editTextTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></EditTexteditTextTime>
     <Button
         android:id="@+id/button_first"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="BUTTON"/>
 
-    <Button
-        android:id="@+id/button_second"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="BUTTON"/>
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="200dp"
+        android:src="@drawable/ic_launcher_foreground"
+        android:background="@drawable/greekband"
+        android:scaleType="centerCrop"/>
 
-    <Button
-        android:id="@+id/button_third"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="BUTTON"/>
-
-    <Button
-        android:id="@+id/button_forth"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="BUTTON"/>
-
-    <EditText
-        android:id="@+id/editTextTextPassword"
+    <SeekBar
+        android:id="@+id/seekBar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPassword" />
-
-    <EditText
-        android:id="@+id/editTextTextEmailAddress"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textEmailAddress" />
-
-    <EditText
-        android:id="@+id/editTextPhone"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="phone" />
-
-    <EditText
-        android:id="@+id/editTextTime"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="time" />
+        android:layout_height="wrap_content" />
 
 
 </LinearLayout>
